@@ -46,7 +46,6 @@ CV.prototype.cvjson = function(csv, output, callback) {
   cvcsv()
     .from.string(csv)
     .transform( function(row){
-      row.unshift(row.pop());
       return row;
     })
     .on('record', function(row, index){
